@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// setup the logger
+// setring up the logger
 app.use(morgan('tiny'));
 
 app.get('/', async (req, res) => {
@@ -27,6 +27,6 @@ const server = app.listen(port, () => {
 process.on('SIGTERM', () => {
   console.debug('SIGTERM signal received: closing HTTP server');
   server.close(() => {
-    console.debug('HTTP server closed');
+    console.debug('HTTP server is currently closed');
   });
 });
