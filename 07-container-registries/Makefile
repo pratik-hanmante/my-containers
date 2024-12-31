@@ -2,7 +2,6 @@
 build:
 	docker build --tag my-scratch-image .
 
-# Have to authenticate to dockerhub and create repo first:
 # https://docs.docker.com/engine/reference/commandline/login/
 .PHONY: push-dockerhub
 push-dockerhub:
